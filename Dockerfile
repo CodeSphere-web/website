@@ -9,8 +9,13 @@ RUN apt-get update && apt-get install -y \
     zip \
     unzip \
     git \
+    curl \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install gd pdo pdo_mysql
+
+# Install Node.js (needed to compile Vite assets)
+RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
+    && apt-get install -y nodejs
 
 # Enable Apache mod_rewrite for Laravel routing
 RUN a2enmod rewrite
@@ -26,11 +31,14 @@ WORKDIR /var/www/html
 # Copy project files
 COPY . .
 
-# Install Composer
+# Install Composer packages
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 RUN composer install --no-dev --optimize-autoloader
 
-# Set correct permissions for Laravel
+# Install NPM packages and compile production assets (Vite)
+RUN npm install
+RUN npm run build
+
 # Set correct permissions for Laravel
 RUN chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
