@@ -57,7 +57,7 @@
                     View Our work
                 </a>
                 <a href="https://wa.me/96181988270" target="_blank" class="w-full sm:w-auto px-8 py-4 rounded-xl border border-gray-700 hover:bg-gray-800/50 hover:border-gray-600 transition flex items-center justify-center gap-2">
-                    Chat on WhatsApp
+                    Let's Chat
                 </a>
             </div>
         </div>
@@ -74,7 +74,7 @@
                 <!-- Laravel Custom Backends -->
                 <div class="p-8 rounded-2xl bg-[#0e1322] border border-gray-800/80 hover:border-cyan-500/40 transition duration-300">
                     <div class="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center text-red-500 mb-6 text-2xl">⚡</div>
-                    <h3 class="text-xl font-bold mb-3">Laravel Custom Backends</h3>
+                    <h3 class="text-xl font-bold mb-3">Laravel Custom Bacdkends</h3>
                     <p class="text-gray-400 leading-relaxed text-sm">Robust databases, complex APIs, and secure server architecture designed to grow with your business.</p>
                 </div>
                 <!-- Ultra-Fast Frontends -->
@@ -98,7 +98,7 @@
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold">Featured Concept Systems</h2>
-                <p class="mt-4 text-gray-400">Ready-made systems showcasing our engineering capabilities.</p>
+                <p class="mt-4 text-gray-400">Ready-made systems showcasing </p>
             </div>
             <h1 align="center">coming soon...</h1>
            <!-- <div class="grid md:grid-cols-2 gap-8">
@@ -147,7 +147,7 @@
 <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
     <!-- 🔑 Put your Web3Forms Access Key here -->
     <input type="hidden" name="access_key" value="43cad4d4-f97c-450d-8f73-ef2352a6bc6b">
-
+    <input type="hidden" name="redirect" value="{{ route('thanks') }}">
     <div class="grid md:grid-cols-3 gap-6">
         <!-- 1. Name Field -->
         <div>
