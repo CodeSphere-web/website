@@ -2,9 +2,11 @@
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="./codespherelogo.png" type="image/x-icon">   
+    <link rel="icon" href="{{ asset('images/codespherelogo1.png') }}" type="image/x-icon">   
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CodeSphere | Next-Gen Web Development in Lebanon</title>
+    <meta name="description" content="CodeSphere is a Lebanese web development company that builds custom backends and blazing-fast - amazing frontends to scale local businesses globally.">
+    <title>CodeSphere | Next-Gen Web Development</title>
+    <meta name="robots" content="index, follow">
     <!-- Tailwind CSS via Vite -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <!-- Inter Font -->
